@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="wizard_publish_product_website" model="ir.ui.view">
+            <field name="name">generate.product.webpublish</field>
+            <field name="model">generate.product.webpublish</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="overwrite_webpublish" string="Publish in website"/>
+                        <field name="overwrite_webnonpublish" string="Hide in website"/>
+                    </group>
+                    <footer>
+                        <button name="generate_product_webpublish" type="object" string="Publish" class="oe_highlight"                         
+                        attrs="{'invisible':[('overwrite_webnonpublish','=', True)]}"
+                        />
+                        <button name="generate_product_webnonpublish" type="object" string="Not Publish" class="oe_highlight"
+                        attrs="{'invisible':[('overwrite_webpublish','=', True)]}"
+                         
+                         />
+                        or
+                        <button special="cancel" string="Close" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window 
+            id="action_publish_product_website"
+            name="Publier sur site"
+            res_model="generate.product.webpublish"
+            src_model="product.product"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"/>
+
+    </data>
+</openerp>
