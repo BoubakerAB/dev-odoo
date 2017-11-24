@@ -9,8 +9,6 @@
     'name': 'Generate Product Web Publish',
     'version': '1.0', 
     'summary': "Generate  product web publish",
-    'price': 10.00,
-    'currency': 'EUR',
     'category': 'Sales Management',  
     'description': """Publish several articles at once to the mass""",
     'author': 'Boubaker',
