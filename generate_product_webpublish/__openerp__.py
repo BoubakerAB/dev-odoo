@@ -11,7 +11,7 @@
     'summary': "Generate  product web publish",
     'category': 'Sales Management',  
     'description': """Publish several articles at once to the mass""",
-    'author': 'Boubaker',
+    'author': 'boubaker abdallah',
     'website': 'http://www.boubaker.tk',
     'depends': ['base','product', 'sale'],
     'data': [
